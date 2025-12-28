@@ -73,7 +73,7 @@ fprintf('--------------------------------------------------\n');
 %% ========================================================================
 %  SECTION 3: DATA INGESTION & 5D MATRIX FORMATION
 % ========================================================================
-fileName = 'data42.bin';              % Raw binary file from DCA1000
+fileName = 'data.bin';              % Raw binary file from DCA1000
 numADCBits = 16; 
 
 % [MY NOTE]: Using the standard TI script to read binary data.
@@ -205,4 +205,5 @@ for frameIndex = frameStart:frameEnd
 end
 
 fprintf('Success! Cleaned GIF saved as: %s\n', gifFileName);
+
 close(h_fig_gif);
