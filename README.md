@@ -25,3 +25,21 @@ Technologies
 MATLAB (Signal Processing Toolbox, Phased Array System Toolbox)
 
 Algorithms: FFT, CFAR (Concept), MTI, Windowing.
+## ⚙️ How to Run This Code
+
+### Prerequisites
+To use this script, you must have the following files in your MATLAB working directory:
+
+1.  **Raw Radar Data (`.bin`):** The binary file captured from your FPGA (e.g., DCA1000EVM).
+2.  **`readDCA1000.m` Script:** This is a standard TI helper script required to parse the 16-bit ADC data. You can find it in the Texas Instruments mmWave Studio directory or their public repositories.
+
+### ⚠️ Configuration Warning
+**Before running the script, you MUST update `SECTION 1` with your specific radar parameters.**
+
+The values currently in the code (e.g., `f = 60e9`, `S = 29.982e12`) are calibrated for my specific hardware setup. Using mismatched parameters will result in incorrect Range/Velocity calculations.
+
+**Parameters to check:**
+* `f` (Start Frequency)
+* `S` (Chirp Slope)
+* `fs` (Sampling Rate)
+* `chirpNum` & `frameNum`
